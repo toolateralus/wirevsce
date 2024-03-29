@@ -1,0 +1,25 @@
+{
+  "name": "scorch",
+  "displayName": "scorch",
+  "description": "syntax highlighting and language server for scorch dynamic language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "scorch",
+      "aliases": ["scorch", "scorch"],
+      "extensions": [".scorch"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "scorch",
+      "scopeName": "source.scorch",
+      "path": "./syntaxes/scorch.tmLanguage.json"
+    }]
+  }
+}

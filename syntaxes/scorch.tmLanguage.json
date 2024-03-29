@@ -1,0 +1,162 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "scorch",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#types"	
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#functions"
+		}
+	],
+	"repository": {
+		"functions": {
+			"patterns": [
+				{
+					"name": "entity.name.function.scorch",
+					"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b\\s*(?=\\()",
+					"captures": {
+						"0": {
+							"name": "punctuation.definition.function.scorch",
+							"match": "\\("
+						},
+						"1": {
+							"name": "meta.function-call.arguments.scorch",
+							"match": "[^\\)]*"
+						},
+						"2": {
+							"name": "punctuation.definition.function.scorch",
+							"match": "\\)"
+						}
+					}
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{
+					"name": "storage.type.builtin.scorch",
+					"match": "\\b(auto|float|i64|i32|i16|i8|double|bool|string|fn|dynamic|array|void)\\b"
+				},
+				{
+					"name": "entity.name.type.class.scorch",
+					"match": "\\b[A-Z][a-zA-Z0-9]*\\b"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.language.scorch",
+					"match": "\\b(true|false)\\b"
+				}
+			]
+		},
+		"comments": {
+			"name": "comment.line.scorch",
+			"begin": "//",
+			"end": "$"
+		},
+		"strings": {
+			"name": "string.quoted.scorch",
+			"begin": "(\"|')",
+			"end": "(\"|')",
+			"patterns": [
+				{
+					"name": "constant.character.escape.scorch",
+					"match": "\\\\."
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.operator.assignment.scorch",
+					"match": ":=|=|:"
+				},
+				{
+					"name": "keyword.operator.arithmetic.scorch",
+					"match": "\\+|-|\\*|/|\\^"
+				},
+				{
+					"name": "keyword.operator.comparison.scorch",
+					"match": "<|>"
+				},
+				{
+					"name": "keyword.operator.logical.scorch",
+					"match": "\\||&|!"
+				},
+				{
+					"name": "punctuation.separator.scorch",
+					"match": ",|\\|"
+				},
+				{
+					"name": "punctuation.bracket.scorch",
+					"match": "\\(|\\)|\\{|\\}|\\[|\\]"
+				},
+				{
+					"name": "punctuation.accessor.scorch",
+					"match": "\\."
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.flow.scorch",
+					"match": "\\b(while|for|if|else|continue|break|return)\\b"
+				},
+				{
+					"name": "keyword.control.declaration.scorch",
+					"match": "\\b(macro|import|const|mut|struct)\\b"
+				},
+				{
+					"name": "keyword.control.type.scorch",
+					"match": "\\b(varargs|typeof|sizeof|as)\\b"
+				},
+				{
+					"name": "keyword.control.scope.scorch",
+					"match": "\\b(extern)\\b"
+				},
+				{
+					"name": "variable.language.this.scorch",
+					"match": "\\bthis\\b"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.integer.scorch",
+					"match": "\\b[0-9]+\\b"
+				},
+				{
+					"name": "constant.numeric.float.scorch",
+					"match": "\\b[0-9]+\\.[0-9]*[fF]?"
+			}
+			]
+		}
+	},
+	"scopeName": "source.scorch"
+}
