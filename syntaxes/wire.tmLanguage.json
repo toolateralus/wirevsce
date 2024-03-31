@@ -57,7 +57,7 @@
 			"patterns": [
 				{
 					"name": "storage.type.builtin.wire",
-					"match": "\\b(enum|auto|float|i64|i32|i16|i8|double|bool|string|fn|dynamic|array|void)\\b"
+					"match": "\\b(auto|float|i64|i32|i16|i8|double|bool|string|fn|dynamic|array|void)\\b"
 				},
 				{
 					"name": "entity.name.type.class.wire",
@@ -129,7 +129,7 @@
 				},
 				{
 					"name": "keyword.control.declaration.wire",
-					"match": "\\b(macro|import|const|mut|struct)\\b"
+					"match": "\\b(enum|macro|import|const|mut|struct)\\b"
 				},
 				{
 					"name": "keyword.control.type.wire",
