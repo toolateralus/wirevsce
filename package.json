@@ -1,7 +1,7 @@
 {
-  "name": "scorch",
-  "displayName": "scorch",
-  "description": "syntax highlighting and language server for scorch dynamic language",
+  "name": "wire",
+  "displayName": "wire",
+  "description": "syntax highlighting and language server for wire dynamic language",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.85.0"
@@ -11,15 +11,15 @@
   ],
   "contributes": {
     "languages": [{
-      "id": "scorch",
-      "aliases": ["scorch", "scorch"],
-      "extensions": [".scorch"],
+      "id": "wire",
+      "aliases": ["wire", "wire"],
+      "extensions": [".wire"],
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
-      "language": "scorch",
-      "scopeName": "source.scorch",
-      "path": "./syntaxes/scorch.tmLanguage.json"
+      "language": "wire",
+      "scopeName": "source.wire",
+      "path": "./syntaxes/wire.tmLanguage.json"
     }]
   }
 }
